@@ -3,13 +3,13 @@
 <title> React.Js<title>
     <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script> 
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script> 
-    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script> <
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script> 
 </head>
 <body>
-<div class="react">
-<p>ReactJs app</p>
+<div id='myDiv'>
+ReactJs app
 </div>
-<!-- Babel type converts react to html -->
+<!-- Babel type converts react to javascript -->
 <script type="text/babel">
     class Hello extends React.Component
     {
@@ -18,6 +18,8 @@
          return <div>Hello from react programming</div>
         }
     }
+    //connect to html 
+    ReactDom.render(<Hello/>,document.getElementById('myDiv'))
 </script>
 
 </body>
